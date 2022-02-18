@@ -9,6 +9,6 @@ class Customer(models.Model):
 
 
 class Address(BaseModel):
-    customer = models.ForeignKey(to=Customer, on_delete=models.SET_NULL)
+    customer = models.ForeignKey(to=Customer, null=True, blank=True, on_delete=models.SET_NULL)
     address = models.TextField()
     ...
